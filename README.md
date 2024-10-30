@@ -3,8 +3,29 @@
 * Title: Multivariate Analysis and Prediction of Heart Disease
 * Data source: https://www.kaggle.com/datasets/redwankarimsony/heart-disease-data
 
+#### Tentative steps
 
-#### Column Descriptions:
+**For milestone 2:**
+
+1. Examine the missingness of data
+![missing](figures/1-missingness.png)
+Observations:
+- Only a small number of observations have features `slope`, `ca`, `thal`. Decide to delete them for now.
+- The missing pattern of `thalch`, `exang`, `oldpeak` is similar. 
+
+Actions:
+- Remove `slope`, `ca`, `thal` for now. (920 x 12)
+- Remove observations with missing values (740 x 12)
+
+2. Change categorical data to features
+
+---
+#### Additional details:
+
+##### Files and descriptions
+
+
+##### Column Descriptions:
 - id (Unique id for each patient)
 - age (Age of the patient in years)
 - origin (place of study)
@@ -28,10 +49,3 @@
         - 2: Moderate heart disease.
         - 3: Severe heart disease.
         - 4: Very severe heart disease.
-
-#### Tentative steps
-1. Examine the missingness of data
-![missing](figures/1-missingness.png)
-
-- Only a small number of observations have features `slope`, `ca`, `thal`. Decide to delete them for now.
-- The missing pattern of `thalch`, `exang`, `oldpeak` is similar. Should be 
